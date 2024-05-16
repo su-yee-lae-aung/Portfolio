@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="port.css" class="rel">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+           
+        }
+
+
+        a {
+            text-decoration: none;
+            color: rgba(255, 0, 0, 0.717);
+
+        }
+
+        nav {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #adadad23;
+            z-index: 99;
+            background-image: url('heart.jpg');
+
+
+        }
+
+        .nav-content {
+            max-width: var(--max-width);
+            margin: auto;
+            padding: 1.5rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 1.2rem;
+
+        }
+
+        nav .logo a {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: black;
+            transition: 0.3s;
+        }
+
+        nav .logo a:hover {
+            color: rgba(255, 0, 0, 0.717);
+
+        }
+
+        nav .checkbox {
+            display: none;
+        }
+
+        nav input {
+            display: none;
+        }
+
+        nav.checkbox i {
+            font-size: 2rem;
+            color: rgba(255, 0, 0, 0.717);
+            cursor: pointer;
+
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            list-style: none;
+            transform: left 0.3s;
+
+        }
+
+        ul li a {
+            padding: 0.5rem 1rem;
+            border: 2px solid transparent;
+            text-decoration: none;
+            font-weight: 600;
+            color: black;
+            transition: 0.3s;
+        }
+
+        ul li a:hover {
+            border-top-color: rgba(255, 0, 0, 0.717);
+            border-bottom-color: rgba(255, 0, 0, 0.717);
+            color: rgba(255, 0, 0, 0.717);
+        }
+
+        @media (width <750px) {
+            nav .checkbox {
+                display: block;
+            }
+
+            ul {
+                position: absolute;
+                width: 100%;
+                height: calc(100vh - 85px);
+                left: -100%;
+                top: 85px;
+                background-color: var(--extra-light);
+                flex-direction: column;
+                justify-content: center;
+                gap: 3rem;
+            }
+
+            nav #check:checked~ul {
+                left: 0;
+            }
+
+            ul li a {
+                font-size: 1.25rem;
+            }
+
+            .section-container {
+                padding: 10rem 1rem 5rem 1rem;
+                text-align: center;
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .image {
+                grid-area: 1/1/2/2;
+
+            }
+
+            .btn {
+                margin: auto;
+
+            }
+        }
+
+        .section {
+            width: 100%;
+            
+        }
+
+        .section .container {
+            width: 80%;
+            display: block;
+            margin: 0px auto;
+            padding: 50px 0px;
+        }
+
+        .container h1 {
+            width: 100%;
+            text-align: left;
+            margin-bottom: 50px;
+            padding: 50px;
+            color: black;
+
+        }
+
+        .content {
+            float: right;
+            width: 50%;
+        
+            
+        }
+
+        .image-section {
+            float: right;
+            width: 30%;
+        }
+
+        .image-section img {
+            width: 80%;
+            height: auto;
+        }
+
+
+        .content .article p {
+            margin-top: 5px;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333333;
+        }
+
+
+
+
+        .container .social {
+            width: 100%;
+            clear: both;
+            margin-top: 50px;
+            text-align: center;
+            display: inline-block;
+
+        }
+
+        .container .social i {
+            color: #ffffff;
+            font-size: 22px;
+            height: 45px;
+            width: 45px;
+            border-radius: 50%;
+            line-height: 45px;
+            text-align: center;
+            background-color: black;
+            margin: 0px 5px;
+        }
+
+        .container .social i:hover {
+            color: #ffffff;
+            background-color: rgba(255, 0, 0, 0.717);
+            transition: 1s ease;
+            transform: rotate(360deg);
+        }
+
+        @media screen and (max-width:768px) {
+            .section .container {
+                width: 80%;
+                display: block;
+                margin: auto;
+            }
+
+            .content {
+                float: none;
+                width: 100%;
+                display: block;
+                margin: auto;
+            }
+
+            .image-section {
+                float: none;
+                width: 100%;
+                margin-top: 50px;
+            }
+
+            .image section img {
+                width: 50%;
+                height: auto;
+                display: block;
+                margin: auto;
+            }
+
+            .container h1 {
+                text-align: center;
+                font-size: 30px;
+            }
+
+            .container .article .button {
+                text-align: center;
+            }
+
+            .container .article .button a {
+                padding: 19px;
+                height: 35px;
+                width: 35px;
+                line-height: 35px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo"><a href="#"><i>Swee</i></a></div>
+            <label for="check" class="checkbox"><i class="fa-solid fa-bars"></i></label>
+            <input type="checkbox" name="check" id="check">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skill.html">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+
+            <h1>About me<i class="fa-solid fa-laptop"></i></h1>
+
+            <div class="content">
+                <div class="article">
+                    <p>Welcome to swee's fronted development hub! I'm a fronted developer dedicated to beautiful,
+                        functional and user-friendly website designs. I specalize in front end development,ensuring
+                        every projects I overtake is visually stunning and techanically robust.Over the years, I'd
+                        worked with diverse clients and my expertise includes HTML, CSS, Javascript, Php and various
+                        content management systems.Let's build something great together. Feel free to reach out to
+                        discuss your next projects and just say to hi!
+                    </p>
+                </div>
+                <div class="social">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+
+                </div>
+            </div>
+            <div class="image-section">
+                <img src="swee.jpg">
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>
